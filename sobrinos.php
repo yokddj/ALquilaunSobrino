@@ -51,7 +51,7 @@
 			}else if($fila['disponibilidad']=='2'){
 				$disponibilidad="No Disponible";	
 			}else{
-				$disponibilidad="ERROR";	
+				$disponibilidad="HA OCURRIDO UN ERROR";	
 			}
 			echo '<h3>' . $disponibilidad . '</h3>';
 			echo '</div>';
