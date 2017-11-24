@@ -1,0 +1,570 @@
+body{
+	
+}
+header{
+	width: 100%;
+	height: 35px;
+	background: #FFFFFF;
+	box-shadow: 0px 3px 10px #5E5D5D;
+	position: relative;
+	z-index: 999;
+	font-family: 'Dancing Script', cursive;
+	font-weight: bolder;
+}
+header h1{
+	display: inline-block;
+	position: relative;
+	text-align: right;
+	float: right;
+	width: 60%;
+	height: 35px;
+	top: -15px;
+	font-size: 1.55em;
+	margin-right: 20px;
+	}
+header h1 > *{
+		text-decoration: none;
+		color: black;
+}
+header nav .ioMenuMovil{
+	height: 35px;
+	width: 120px;
+	cursor: pointer;
+	line-height: 40px;
+	margin: 0px 0px 0px 10px;
+}
+header nav .ioMenuMovil img{
+	height: 100%;
+
+}
+header nav #divMenu{
+	display: none;
+	position: relative;
+	width: 230px;
+	background: white;
+	height: 100%;
+	top:-35px;
+	left: 0px;
+	border-right: 3px solid #B0FABC;
+	border-bottom: 3px solid #B0FABC;
+	z-index: 999;
+	padding-bottom: 50px;
+
+}
+header nav #divMenu #logo_menu{
+	width: 80%;
+	margin: 40px 0px;
+	margin-left: 10%;
+	margin-bottom: 50px;
+}
+header nav #divMenu #logo_menu img{
+	width: 100%;
+}
+header nav #divMenu ul{
+	margin-top: -20px;
+}
+header nav #divMenu ul li{
+	list-style: none;
+	font-size: 1.5em;
+	line-height: 37px;
+}
+header nav #divMenu ul li a{
+	text-decoration: none;
+	color: black;
+}
+
+
+
+/* Le damos estilo al CUERPO de la página web */
+/* -----------------------SLIDE-----------------------------*/
+#slider{
+	position: relative;
+	width: 100%;
+	margin:0 auto;
+	max-height: 600px;
+	top:-31px;
+}
+
+.slides{
+	width: 100%;
+	position: relative;
+}
+.slides img{
+	width: 100%;
+}
+
+#imgSlider1{
+	display: inline;
+}
+#imgSlider2{
+	display: none;
+}
+#imgSlider3{
+	display: none;
+}
+#imgSlider4{
+	display: none;
+}
+
+/* -----------------------EMPRESA-----------------------------*/
+
+#enterprise{
+	position: relative;
+	display: inline-block;
+	box-sizing:border-box;
+	width: 100%;
+	top:-5px;
+	background-color: #E7E4E4;
+	padding: 50px;
+	text-align: center;
+	
+}
+#enterprise h1{
+	font-family: 'Dancing Script', cursive;
+	font-weight: bolder;
+}
+
+/* -----------------------MIEMBROS-----------------------------*/
+#members{
+	box-sizing:border-box;
+	position: relative;
+	display: inline-block;
+	height: 200px;
+	width: 100%;
+	text-align: center;
+	
+}
+#members h1{
+	font-family: 'Dancing Script', cursive;
+	font-weight: bolder;
+}
+#fundadores{
+	margin-left: 30%;
+	max-width: 40%;
+
+}
+#imgfundadores{
+	width: 100%;
+	border-radius: 15px;
+}
+#members p{
+	padding: 50px;
+	text-align: center;
+}
+
+
+
+/* -----------------------Footer-----------------------------*/
+footer{
+	position: relative;
+	display: inline-block;
+	background-color: black;
+	min-height: 60px;
+	top: 50px;
+	
+	
+}
+footer p{
+	color: white;
+	padding-left: 50px;
+	padding-top: 20px;
+}
+
+
+
+@media screen and (min-width: 767px) {
+	
+	header{
+	background-color: #FFFFFF;
+	position: fixed; 
+	top: 0; 
+	left: 0; 
+	width: 100%;
+	height: 70px;
+	z-index: 10;
+	box-shadow: 0px 3px 10px #5E5D5D;
+	font-family: 'Dancing Script', cursive;
+	font-weight: bolder;
+	}
+	header h1{
+	display: inline-block;
+	width: 30%;
+	margin-left: 30px;
+	height: 50px;
+	text-align: left;
+	float: left;
+	margin-right: 0px;
+	top: 0px;
+	font-size: 1.69em;
+	}
+	
+	
+	
+	header nav{
+	display: inline-block;
+	float: right;
+	width: 65%;
+	top: 50px;
+	height: 50px;
+	vertical-align: middle;
+	}
+	header nav #showMenu,
+	header nav #hideMenu{
+		display: none;
+	}
+	header nav #divMenu{
+		display: inline-block;
+		border:none;
+		background: none;
+		position: relative;
+		top: 0px;
+		width: 100%;
+		text-align: right;
+		padding-bottom: 0px;
+		vertical-align: middle;
+	}
+	header nav #divMenu figure{
+		display: none;
+	}
+	header nav #divMenu ul{
+		padding: 0px;
+		margin: 0px;
+		margin-top: 17px;
+	}
+	header nav #divMenu ul li{
+		display: inline-block;
+		width: 122px;
+		text-align: center;
+		font-size: 1.19em;
+		margin: 0px -2px;
+
+	}
+	header nav #divMenu ul li a{
+		color:black;
+
+	}
+
+	#slider{
+	top: 20px;
+	}
+
+	/*--------------------------------Animaciones HEADER------------------*/
+	#titleMenu:hover{
+		-webkit-animation: 0.8s balanceo 1;
+	}
+
+	@-webkit-keyframes balanceo{
+		50%{
+			-webkit-transform:scale(0.9);
+		}
+		
+	}
+	#home a:hover{
+		box-shadow: 0px 3px 0px #5E5D5D;
+	}
+	#sobrinos a:hover{
+		box-shadow: 0px 3px 0px #5E5D5D;
+	}
+	#clientes a:hover{
+		box-shadow: 0px 3px 0px #5E5D5D;
+	}
+	#contacto a:hover{
+		box-shadow: 0px 3px 0px #5E5D5D;
+	}
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-----------------------------------------------------------------------------*/ 
+/*-----------------------------------------------------------------------------*/ 
+/*--------------------------------APARTADOS CLIENTES---------------------------*/ 
+/*-----------------------------------------------------------------------------*/ 
+/*-----------------------------------------------------------------------------*/ 
+#div_Title{
+  top:70px;
+  position: relative;
+}
+#client_Title{
+  text-align: center;
+  font-family: 'Dancing Script', cursive;
+  font-weight: bolder;
+}
+
+.contenedor-clientes{   
+  width: 400px;
+  top:70px;
+  position: relative;
+  margin:0 auto;
+  
+}
+.div-img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    cursor: pointer;
+
+
+   }
+   /*--------------------------ETSIT-------------------------------*/
+.img-etsit{
+	 width: 100%;
+  display: block;
+  background-color: #FFFFFF;
+  position: relative;
+  
+}
+.text-etsit{
+        
+        position:relative;
+        z-index: -1;
+        display:block;
+        height: 10%;
+        top:-185px;
+        right:0;
+        padding-right:5px;
+    }
+
+  /*---------------------PASCUAL----------------------------*/
+  .img-pascual{
+   width: 100%;
+  display: block;
+  background-color: #FFFFFF;
+  position: relative;
+  top: 0px;
+  }
+.text-pascual{
+        
+        position:relative;
+        z-index: -1;
+        display:block;
+        height: 10%;
+        top:-150px;
+        right:0;
+        padding-right:5px;
+    }
+
+
+
+ /*---------------------michelin----------------------------*/
+  .img-michelin{
+   width: 100%;
+  display: block;
+  background-color: #FFFFFF;
+  position: relative;
+  top: -30px;
+  }
+.text-michelin{
+        
+        position:relative;
+        z-index: -1;
+        display:block;
+        height: 10%;
+        top:-210px;
+        right:0;
+        padding-right:5px;
+    }
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-----------------------------------------------------------------------------*/ 
+/*-----------------------------------------------------------------------------*/ 
+/*--------------------------------APARTADOS SOBRINOS---------------------------*/ 
+/*-----------------------------------------------------------------------------*/ 
+/*-----------------------------------------------------------------------------*/ 
+#div_Title{
+  top:50px;
+  padding: 20px;
+  position: relative;
+}
+#sobrinos_Title{
+  text-align: center;
+  font-family: 'Dancing Script', cursive;
+  font-weight: bolder;
+}
+
+
+
+
+ .divsobrino{
+ 	border: 3px solid #504E4E;
+ 	border-radius: 15px;
+ 	margin-left: 100px;
+ 	margin-top: 50px;
+ 	margin-bottom:50px; 
+ 	top: 30px;
+ 	position: relative;
+ 	display: inline-block;
+ 	width:200px;
+ 	height: 400px;
+ 	background-color: #81FA81; 
+ 	 font-family: 'Dancing Script', cursive;
+  font-weight: bolder;
+ }
+ .divsobrino h2{
+ 	text-align: center;
+ }
+ .divsobrino p{
+ 	margin-left:10px; 
+ 	margin-right:10px; 
+ 	text-align: center;
+ }
+ .divsobrino h3{
+ 	text-align: center;
+ }
+ 
+.divimgsobrino{
+	margin: auto;
+	margin-top: 5px;
+	width: 150px;
+	height: 150px;
+}
+.imgsobrino{
+	width: 100%;
+	border: 2px solid #9F9A9A;
+	border-radius: 50px;
+}
+
+
+   @media screen and (max-width: 750px) {
+  
+	.divsobrino{
+ 	margin-left: 50px;
+ 	margin-top: 50px;
+ 	margin-bottom:50px; 
+	 }
+
+  }
+   
+   @media screen and (min-width: 1550px) {
+  
+		.contenedorsobrinos{
+			min-height: 780px;
+		}
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-----------------------------------------------------------------------------*/ 
+/*-----------------------------------------------------------------------------*/ 
+/*--------------------------------APARTADOS USUARIOS---------------------------*/ 
+/*-----------------------------------------------------------------------------*/ 
+/*-----------------------------------------------------------------------------*/ 
+#formulario_usuarios{
+	
+  top:50px;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  display: inline;
+  margin-bottom: 30px;
+}
