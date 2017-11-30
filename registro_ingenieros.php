@@ -24,7 +24,7 @@ $disponibilidad = trim($disponibilidad);
 
 include('conexionBD.php');
 
-$query="insert into ingenieros values (NULL,'".$nombre ."', '".$descripcion ."', ' ". $foto ."', ' ". $precio ."', ' ". $disponibilidad ."' )";
+$query="insert into ingenieros values (NULL,'".$nombre ."', '".$descripcion ."', ' ". $foto ."', ' ". $precio ."',  ". $disponibilidad ." )";
 echo $query;
 $resultado=mysqli_query($bd,$query);
 $num=mysqli_affected_rows($bd);
