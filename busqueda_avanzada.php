@@ -24,15 +24,29 @@
 
 	<div class="contenedorsobrinos">
 	
-	<div id="formulario_busqueda_simple">
-		<form id="busqueda_simple_form" action="busqueda_simple.php" method="POST">
+	<div id="formulario_busqueda_avanzada">
+		<form id="busqueda_avanzada_form" action="busqueda_avanzada_resultado.php" method="POST">
 						
 			<div class="row">
-				<label>Busque el nombre del ingeniero que desea:</label>
-				<input id="text" class="input" name="busqueda_nombre" type="text" maxlength="20"/>
-				<input id="submit_button"  style="background-color: #1F96FA" type="submit" value="Buscar" onClick="window.document.formulario.submit();"/>		
+				<label>Nombre:</label><br />
+				<input id="text" class="input" name="nombre" type="text" maxlength="20"/><br />
 			</div>
-			<p>Si quiere realizar una búsqueda avanzada pulse <a href="busqueda_avanzada.php">aqui</a></p>
+			<div class="row">
+				<label>Descripcion:</label><br />
+				<input id="text" class="input" name="descripcion" type="text" maxlength="254"/><br />
+			</div>
+			<div class="row">
+				<label>Precio:</label><br />
+				<input id="text" class="input" name="precio" type="float(7,2)" maxlength="20"/><br />
+			</div>
+			<div class="row">
+				<label>Disponible</label>
+				<input TYPE="radio" NAME="disponibilidad" VALUE="1" CHECKED>  <br />
+				<label>No disponible</label>
+				<input TYPE="radio" NAME="disponibilidad" VALUE="2" >  
+			</div>
+			<input id="submit_button"  style="background-color: #1F96FA" type="submit" value="Buscar" onClick="window.document.formulario.submit();"/>
+			<input id="reset_button" style="background-color: #FF2A00" type="submit" value="Reset" onClick="window.document.formulario.reset();"/>
 			</form>		
 		
 	</div>
@@ -40,13 +54,10 @@
 
 	<?php
 	//Consulta a la Base de Datos
-	@ $busqueda = $_POST['busqueda'];
-	$busqueda = trim($busqueda);
-	$query="select * from ingenieros WHERE nombre LIKE '".$busqueda ."%' or descripcion LIKE '".$busqueda ."%'";
+	$query="select * from ingenieros";
 	$resultado=mysqli_query($bd,$query);
 	$num=mysqli_num_rows($resultado);
-	echo "Hay	"	.	$num	. " coincidencias en nuestro sistema.	<br>";
-	
+		
 	for($i=0;$i<$num;$i++){
 
 		$fila=mysqli_fetch_array($resultado);
