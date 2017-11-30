@@ -25,25 +25,27 @@
 	<div class="contenedorsobrinos">
 	
 	<div id="formulario_busqueda_avanzada">
-		<form id="busqueda_avanzada_form" action="busqueda_avanzada_resultado.php" method="POST">
-						
+		<form id="busqueda_avanzada_form" action="busqueda_avanzada_resultado.php" method="POST">		
 			<div class="row">
+				<br>
+				<br>
+				<br>	
 				<label>Nombre:</label><br />
-				<input id="text" class="input" name="nombre" type="text" maxlength="20"/><br />
+				<input id="text" class="input" name="busqueda_nombre" type="text" maxlength="20"/><br />
 			</div>
 			<div class="row">
 				<label>Descripcion:</label><br />
-				<input id="text" class="input" name="descripcion" type="text" maxlength="254"/><br />
+				<input id="text" class="input" name="busqueda_descripcion" type="text" maxlength="254"/><br />
 			</div>
 			<div class="row">
 				<label>Precio:</label><br />
-				<input id="text" class="input" name="precio" type="float(7,2)" maxlength="20"/><br />
+				<input id="text" class="input" name="busqueda_precio" type="number" maxlength="20"/><br />
 			</div>
 			<div class="row">
 				<label>Disponible</label>
-				<input TYPE="radio" NAME="disponibilidad" VALUE="1" CHECKED>  <br />
+				<input TYPE="radio" NAME="busqueda_disponibilidad" VALUE="1" CHECKED>  <br />
 				<label>No disponible</label>
-				<input TYPE="radio" NAME="disponibilidad" VALUE="2" >  
+				<input TYPE="radio" NAME="busqueda_disponibilidad" VALUE="2" >  
 			</div>
 			<input id="submit_button"  style="background-color: #1F96FA" type="submit" value="Buscar" onClick="window.document.formulario.submit();"/>
 			<input id="reset_button" style="background-color: #FF2A00" type="submit" value="Reset" onClick="window.document.formulario.reset();"/>

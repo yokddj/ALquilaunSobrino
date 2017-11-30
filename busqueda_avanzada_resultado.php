@@ -63,7 +63,7 @@
 	$busqueda_descripcion = trim($busqueda_descripcion);
 	$busqueda_precio = trim($busqueda_precio);
 	$busqueda_disponibilidad = trim($busqueda_disponibilidad);
-	$query="select * from ingenieros WHERE nombre LIKE '".$busqueda_nombre ."%' and descripcion LIKE '".$busqueda_descripcion ."%'  and disponibilidad LIKE '".$busqueda_disponibilidad ."%'" ;
+	$query="select * from ingenieros WHERE nombre LIKE '%".$busqueda_nombre ."%' and descripcion LIKE '%".$busqueda_descripcion ."%'  and disponibilidad LIKE '%".$busqueda_disponibilidad ."%'" ;
 	/*Este if se encarga de comparar el precio
 	busca todos los precios menores o iguales al introducido
 	$query.= " "--> concatena con la query anterior*/

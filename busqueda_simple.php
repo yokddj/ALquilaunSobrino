@@ -42,7 +42,7 @@
 	//Consulta a la Base de Datos
 	@ $busqueda = $_POST['busqueda'];
 	$busqueda = trim($busqueda);
-	$query="select * from ingenieros WHERE nombre LIKE '".$busqueda ."%' or descripcion LIKE '".$busqueda ."%'";
+	$query="select * from ingenieros WHERE nombre LIKE '%".$busqueda ."%' or descripcion LIKE '%".$busqueda ."%'";
 	$resultado=mysqli_query($bd,$query);
 	$num=mysqli_num_rows($resultado);
 	echo "Hay	"	.	$num	. " coincidencias en nuestro sistema.	<br>";

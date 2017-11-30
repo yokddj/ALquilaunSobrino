@@ -470,7 +470,9 @@ footer p{
   font-weight: bolder;
 }
 
-
+#busqueda_avanzada_form{
+	margin-top: 35px;
+}
 
 
  .divsobrino{
