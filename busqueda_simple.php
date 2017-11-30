@@ -40,7 +40,9 @@
 
 	<?php
 	//Consulta a la Base de Datos
-	$query="select * from ingenieros";
+	@ $busqueda_nombre = $_POST['busqueda_nombre'];
+	$busqueda_nombre = trim($busqueda_nombre);
+	$query="select * from ingenieros WHERE nombre LIKE '".$busqueda_nombre ."%'";
 	$resultado=mysqli_query($bd,$query);
 	$num=mysqli_num_rows($resultado);
 	echo "En estos momentos tenemos:	"	.	$num	. " ingenieros en nuestro sistema.	<br>";
