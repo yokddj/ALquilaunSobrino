@@ -23,7 +23,19 @@
 		
 
 	<div class="contenedorsobrinos">
+	
+	<div id="formulario_busqueda_simple">
+		<form id="busqueda_simple_form" action="" method="POST">
+						
+			<div class="row">
+				<label>Busque el nombre del ingeniero que desea:</label>
+				<input id="text" class="input" name="busqueda_nombre" type="text" maxlength="20"/><br />
+			</div>
+		</form>		
 		
+	</div>
+
+
 	<?php
 
 	
