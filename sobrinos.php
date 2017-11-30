@@ -46,9 +46,9 @@
 			echo '<h3>P.V.P. ' . $fila['precio'] . '</h3>';
 
 			//Convertimos la disponibilidad en una cadena
-			if ($fila['disponibilidad']=='1') {
+			if ($fila['disponibilidad']==1) {
 				$disponibilidad="Disponible";	
-			}else if($fila['disponibilidad']=='2'){
+			}else if($fila['disponibilidad']==2){
 				$disponibilidad="No Disponible";	
 			}else{
 				$disponibilidad="HA OCURRIDO UN ERROR";	
