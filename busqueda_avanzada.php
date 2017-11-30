@@ -27,9 +27,6 @@
 	<div id="formulario_busqueda_avanzada">
 		<form id="busqueda_avanzada_form" action="busqueda_avanzada_resultado.php" method="POST">		
 			<div class="row">
-				<br>
-				<br>
-				<br>	
 				<label>Nombre:</label><br />
 				<input id="text" class="input" name="busqueda_nombre" type="text" maxlength="20"/><br />
 			</div>
