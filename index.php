@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <!--    AGREGAMOS HEAD CON PHP	-->
+<!-- me mola hacer versiones -->
 <head>
 	<?php 
 
