@@ -29,7 +29,7 @@
 						
 			<div class="row">
 				<label>Busque el nombre del ingeniero que desea:</label>
-				<input id="text" class="input" name="busqueda_nombre" type="text" maxlength="20"/>
+				<input id="text" class="input" name="busqueda" type="text" maxlength="20"/>
 				<input id="submit_button"  style="background-color: #1F96FA" type="submit" value="Buscar" onClick="window.document.formulario.submit();"/>		
 			</div>
 			<p>Si quiere realizar una búsqueda avanzada pulse <a href="busqueda_avanzada.php">aqui</a></p>
