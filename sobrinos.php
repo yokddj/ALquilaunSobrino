@@ -55,6 +55,7 @@
 			echo '<p>' . $fila['descripcion'] . '</p>';
 			echo '<h3>P.V.P. ' . $fila['precio'] . '</h3>';
 
+
 			//Convertimos la disponibilidad en una cadena
 			if ($fila['disponibilidad']==1) {
 				$disponibilidad="Disponible";	
@@ -64,7 +65,10 @@
 				$disponibilidad="HA OCURRIDO UN ERROR";	
 			}
 			echo '<h3>' . $disponibilidad . '</h3>';
+			echo '<input id="submit_button" style="background-color: #1F96FA"; type="submit" value="COMPRAR" onClick="window.document.formulario.submit();"/>';
 			echo '</div>';
+
+
 	}
 	
 	?>
