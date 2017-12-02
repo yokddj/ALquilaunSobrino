@@ -65,7 +65,8 @@
 				$disponibilidad="HA OCURRIDO UN ERROR";	
 			}
 			echo '<h3>' . $disponibilidad . '</h3>';
-			echo '<input id="submit_button" style="background-color: #1F96FA"; type="submit" value="COMPRAR" onClick="window.document.formulario.submit();"/>';
+			//echo '<input id="submit_button" style="background-color: #1F96FA"; type="submit" value="COMPRAR" onClick="window.document.formulario.submit();"/>';
+			echo '<div id="boton_Compra"><p>COMPRAR</p></div>';
 			echo '</div>';
 
 

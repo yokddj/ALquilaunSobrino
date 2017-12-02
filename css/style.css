@@ -508,11 +508,13 @@ footer p{
 	width: 150px;
 	height: 150px;
 }
-#submit_button {
+/*#submit_button {
 	margin-left: 12%;
 	width: 150px;
 	height: 30px;
-}
+}*/
+
+
 .imgsobrino{
 	width: 100%;
 	border: 2px solid #9F9A9A;
@@ -520,6 +522,35 @@ footer p{
 }
 #formulario_busqueda_simple{
 	margin-top: 35px;
+}
+
+/*-----------BOTON COMPRA--------------*/ 
+#boton_Compra{
+	background-color: #138CC4;
+	border-radius: 5px;
+	width: 130px;
+	height: 40px;
+	margin-left: 35px;
+	cursor: pointer;
+}
+#boton_Compra p{
+	line-height: 40px;  
+	font-weight: bolder;
+}
+
+
+/*-----------CLICK--------------*/ 
+#boton_Compra:active{
+	-webkit-animation: 0.7s click 1;
+}
+
+@-webkit-keyframes click{
+	25%,75%{
+		-webkit-transform:scale(0.8);
+	}
+	50%{
+		-webkit-transform:scale(1.1);
+	}
 }
 
    @media screen and (max-width: 750px) {
