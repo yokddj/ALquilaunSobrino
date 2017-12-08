@@ -66,11 +66,14 @@
 			}
 			echo '<h3>' . $disponibilidad . '</h3>';
 			//echo '<input id="submit_button" style="background-color: #1F96FA"; type="submit" value="COMPRAR" onClick="window.document.formulario.submit();"/>';
-			echo '<div id="boton_Compra"><p>COMPRAR</p></div>';
+			echo '<div id="boton_Compra" onclick="anadirCarrito('.$fila['id_ingeniero'].','.$fila['disponibilidad'].')" ><p>COMPRAR</p></div>';
 			echo '</div>';
 
 
 	}
+
+
+	
 	
 	?>
 
@@ -98,7 +101,17 @@
 			}
 
 		}
+		function anadirCarrito(id_ingenierov,disponibilidad){
+			//Aqui deberemos llamar a una funcion php que añada al carrito el ingeniero selecciónado
+			//alert("Has añadido un producto al carrito "+id_ingeniero);
+			var carrito=[];
+			carrito.push(id_ingeniero);
+			alert(carrito[0]);
+			alert(carrito[1]);
+			alert(carrito[2]);
+			alert(carrito[3]);
 
+		}
 
 		
 	</script>	
