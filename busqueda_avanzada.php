@@ -77,6 +77,7 @@
 				$disponibilidad="HA OCURRIDO UN ERROR";	
 			}
 			echo '<h3>' . $disponibilidad . '</h3>';
+			echo '<div id="boton_Compra" ><a href="./carrito.php?id='.$fila['id_ingeniero'].'">COMPRAR</a></div>';
 			echo '</div>';
 	}
 	

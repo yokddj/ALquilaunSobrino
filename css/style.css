@@ -695,7 +695,85 @@ footer p{
 /*--------------------------------APARTADOS CARRITO---------------------------*/ 
 /*-----------------------------------------------------------------------------*/ 
 /*-----------------------------------------------------------------------------*/ 
+#carrito_Title{
+  text-align: center;
+  font-family: 'Dancing Script', cursive;
+  font-weight: bolder;
+}
 #contenedor_carrito{
-margin-top: 100px;
+
   min-height: 80vh;
+}
+.producto_carrito{
+border: 3px solid #504E4E;
+ 	border-radius: 15px;
+ 	margin-left: 100px;
+ 	margin-top: 50px;
+ 	margin-bottom:50px; 
+ 	top: 30px;
+ 	position: relative;
+ 	display: inline-block;
+ 	width:200px;
+ 	height: 300px;
+ 	background-color: #81FA81; 
+ 	 font-family: 'Dancing Script', cursive;
+  font-weight: bolder;
+}
+.div_imagen_carrito{
+	margin: auto;
+	margin-top: 5px;
+	width: 150px;
+	height: 150px;
+}
+
+
+ .producto_carrito h2{
+ 	text-align: center;
+ }
+ .producto_carrito p{
+ 	margin-left:10px; 
+ 	margin-right:10px; 
+ 	text-align: center;
+ }
+ 
+ 
+
+
+.div_imagen_carrito img{
+	width: 100%;
+	border: 2px solid #9F9A9A;
+	border-radius: 50px;
+}
+
+
+/*-----------BOTON ELIMINAR--------------*/ 
+#boton_Eliminar{
+	background-color: #138CC4;
+	border-radius: 5px;
+	width: 130px;
+	height: 40px;
+	cursor: pointer;
+}
+#boton_Eliminar a{
+	
+	line-height: 40px;  
+	color: black;
+	font-weight: bolder;
+	text-decoration: none;
+	
+}
+
+
+/*-----------CLICK--------------*/ 
+#boton_Compra:active{
+	-webkit-animation: 0.7s click 1;
+}
+
+@-webkit-keyframes click{
+	25%,75%{
+		-webkit-transform:scale(0.8);
+	}
+	50%{
+		-webkit-transform:scale(1.1);
+	}
 }
