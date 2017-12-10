@@ -46,7 +46,7 @@
 		
 	for($i=0;$i<$num;$i++){
 
-		$fila=mysqli_fetch_array($resultado);
+			$fila=mysqli_fetch_array($resultado);
 			echo '<div class="divsobrino">';
 			echo '<div class="divimgsobrino">';
 			$foto = trim($fila['foto']); //Esto va aqui porque incluia un espacio antesd el nombre de la foto
@@ -66,8 +66,9 @@
 			}
 			echo '<h3>' . $disponibilidad . '</h3>';
 			//echo '<input id="submit_button" style="background-color: #1F96FA"; type="submit" value="COMPRAR" onClick="window.document.formulario.submit();"/>';
-			echo '<div id="boton_Compra" onclick="anadirCarrito('.$fila['id_ingeniero'].','.$fila['disponibilidad'].')" ><p>COMPRAR</p></div>';
+			echo '<div id="boton_Compra" ><a href="./carrito.php?id='.$fila['id_ingeniero'].'">COMPRAR</a></div>';
 			echo '</div>';
+
 
 
 	}
@@ -101,18 +102,7 @@
 			}
 
 		}
-		function anadirCarrito(id_ingenierov,disponibilidad){
-			//Aqui deberemos llamar a una funcion php que añada al carrito el ingeniero selecciónado
-			//alert("Has añadido un producto al carrito "+id_ingeniero);
-			var carrito=[];
-			carrito.push(id_ingeniero);
-			alert(carrito[0]);
-			alert(carrito[1]);
-			alert(carrito[2]);
-			alert(carrito[3]);
-
-		}
-
+		
 		
 	</script>	
 </body>

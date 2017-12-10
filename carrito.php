@@ -1,3 +1,62 @@
+<?php 
+	session_start();
+	include 'conexionBD.php';
+	if(isset($_SESSION['carrito'])){
+		if(isset($_GET['id'])){
+					$array_sesion=$_SESSION['carrito'];
+					$encontro=false;
+					$numero=0;
+					for($i=0;$i<count($array_sesion);$i++){
+						if($array_sesion[$i]['Id']==$_GET['id']){
+							$encontro=true;
+							$numero=$i;
+						}
+					}
+					if($encontro==true){
+						$_SESSION['carrito']=$array_sesion;
+					}else{
+						$nombre="";
+						$precio=0;
+						$imagen="";
+						$re=mysql_query("select * from ingenieros where id_ingeniero=".$_GET['id']);
+						while ($f=mysql_fetch_array($re)) {
+							$nombre=$f['nombre'];
+							$precio=$f['precio'];
+							$imagen=$f['foto'];
+						}
+						$datosNuevos=array('Id'=>$_GET['id'],
+										'Nombre'=>$nombre,
+										'Precio'=>$precio,
+										'Imagen'=>$imagen);
+
+						array_push($array_sesion, $datosNuevos);
+						$_SESSION['carrito']=$array_sesion;
+
+					}
+		}
+
+
+
+
+	}else{
+		if(isset($_GET['id'])){
+			$nombre="";
+			$precio=0;
+			$imagen="";
+			$re=mysql_query("select * from ingenieros where id_ingeniero=".$_GET['id']);
+			while ($f=mysql_fetch_array($re)) {
+				$nombre=$f['nombre'];
+				$precio=$f['precio'];
+				$imagen=$f['foto'];
+			}
+			$array_sesion[]=array('Id'=>$_GET['id'],
+							'Nombre'=>$nombre,
+							'Precio'=>$precio,
+							'Imagen'=>$imagen);
+			$_SESSION['carrito']=$array_sesion;
+		}
+	}
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,42 +76,37 @@
 		include 'cabecera.html';
  	?>
 	<div id="contenedor_carrito">
-		<div class="div_prod_carrito">
-			<div class="div_prod_carrito_img"><img class="img_prod_carrito"  src="img/sobrinos.JPG" alt=""></div>
-			<p>Ingeniero 1</p>
-			<h3>P.V.P. 35,00€</h3>
-		</div>
-
+		
 		
 		<?php 
-
-
-			include('conexionBD.php');
-
-			//Consulta a la Base de Datos
-			$query="select * from ingenieros";
-			$resultado=mysqli_query($bd,$query);
-			$num=mysqli_num_rows($resultado);
-			echo "<table border='1'>"; 
-
-			echo "<tr><td>id_ingeniero</td><td>nombre</td><td>descripcion</td><td>foto</td><td>precio</td><td>disponibilidad</td></tr>"; 
-
-			for($i=0;$i<$num;$i++){
-
-				$fila=mysqli_fetch_array($resultado);
-				echo "<tr>";
-				echo "<td>".$fila['id_ingeniero']."</td>";
-				echo "<td>".$fila['nombre']."</td>";
-				echo "<td>".$fila['foto']."</td>";
-				echo "<td>".$fila['descripcion']."</td>";
-				echo "<td>".$fila['precio']."</td>";
-				echo "<td>".$fila['disponibilidad']."</td>";
-				echo "<tr>";
+		$total=0;
+		//Comprobamos que exista la variable de sesion
+		if(isset($_SESSION['carrito'])){
+			$datos=$_SESSION['carrito']; //Guardamos lo que trae la variable de sesion
+			
+			$total=0;
+			for($i=0;$i<count($datos);$i++){
+				
+		?>
+				<div class="producto_carrito">
+					<center>
+						<img src="img/<?php echo $datos[$i]['Imagen'];?>"><br>
+						<span><?php echo $datos[$i]['Nombre'];?></span><br>
+						<span>Precio: <?php echo $datos[$i]['Precio'];?></span><br>
+												
+					</center>
+				</div>
+			<?php
+				$total=($datos[$i]['Precio'])+$total;
 			}
-			echo "</table>";
+				
+			}else{
+				echo '<center><h2>No has añadido ningun producto</h2></center>';
+			}
+			echo '<center><h2>Total: '.$total.'</h2></center>';
 
 		 ?>
-		
+		<center><a href="sobrinos.php">Volver al catalogo</a></center>
 
 
 	</div>

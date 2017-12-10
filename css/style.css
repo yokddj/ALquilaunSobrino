@@ -536,9 +536,14 @@ footer p{
 	margin-left: 35px;
 	cursor: pointer;
 }
-#boton_Compra p{
+#boton_Compra a{
+	
 	line-height: 40px;  
+	color: black;
 	font-weight: bolder;
+	text-decoration: none;
+	margin-left: 25px;
+	
 }
 
 
@@ -691,6 +696,6 @@ footer p{
 /*-----------------------------------------------------------------------------*/ 
 /*-----------------------------------------------------------------------------*/ 
 #contenedor_carrito{
-	
-  min-height: 85vh;
+margin-top: 100px;
+  min-height: 80vh;
 }
