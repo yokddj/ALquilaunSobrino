@@ -123,6 +123,9 @@
 						echo '<center><h2>No has añadido ningun producto</h2></center>';
 					}
 					echo '<center><h2>Total: '.$total.' €</h2></center>';
+					if($total!=0){
+						echo '<center><div id="boton_Compra" ><a href="#">COMPRAR</a></div></center>';
+					}
 
 				 ?>
 				<center><a href="sobrinos.php">Volver al catalogo</a></center>
