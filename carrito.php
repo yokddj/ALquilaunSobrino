@@ -3,6 +3,7 @@ session_start();
 include 'conexionBD.php';
 
 
+
 if(isset($_SESSION['carrito'])){//Aqui entrara si ya hay alguien en el carro
 	if(isset($_GET['id'])){
 		$array_sesion=$_SESSION['carrito'];
@@ -13,20 +14,19 @@ if(isset($_SESSION['carrito'])){//Aqui entrara si ya hay alguien en el carro
 			}
 		}
 		if($encontro==true){
-						//En este caso no hacemos nada porque el ingeniero ya estaba en el carrito
+			//En este caso no hacemos nada porque el ingeniero ya estaba en el carrito
 			echo '<script language="javascript">alert("El ingeniero ya estaba en el carrito");</script>'; 
 		}else{
-			$nombre="";
+			$nombre=""; 
 			$precio=0;
 			$imagen="";
-						//Buscamos el ingeniero que acabamos de añadir al carro
+			//Buscamos el ingeniero que acabamos de añadir al carro
 			$query="select * from ingenieros where id_ingeniero=".$_GET['id'];	
 			$resultado=mysqli_query($bd,$query);
 
-						//Lo guardamos en la variable de sesion
+			//Lo guardamos en la variable de sesion
 			while ($fila=mysqli_fetch_array($resultado)) {
-
-				$nombre=$fila['nombre'];
+				$nombre=$fila['nombre'];				
 				$precio=$fila['precio'];
 				$imagen = trim($fila['foto']);
 			}
@@ -68,6 +68,7 @@ if(isset($_SESSION['carrito'])){//Aqui entrara si ya hay alguien en el carro
 		$_SESSION['carrito']=$array_sesion;
 	}
 }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">

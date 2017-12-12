@@ -36,6 +36,7 @@
 		<h1 id="contact_Title">USUARIOS</h1>
 		<form id="contact_form" action="registro_usuarios.php" method="POST">
 			
+			
 			<div class="row">
 				<label>Login:</label><br />
 				<input id="text" class="input" name="login" type="text" maxlength="20"/><br />
@@ -70,7 +71,7 @@
 			</div>
 			<div class="row">
 				<label>Fecha de Nacimiento:</label><br />
-				<input id="text" class="input" name="fecha_nacimiento" type="date" maxlength="20"/><br />
+				<input id="text" class="input" name="fecha_nacimiento" type="date" /><br />
 			</div>
 			
 			<input id="submit_button"  style="background-color: #1F96FA" type="submit" value="Send email" onClick="window.document.formulario.submit();"/>
