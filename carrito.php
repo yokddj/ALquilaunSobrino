@@ -85,8 +85,19 @@ if(isset($_SESSION['carrito'])){//Aqui entrara si ya hay alguien en el carro
 
 		<?php 
 
-		include 'cabecera.html';
-		?>
+			if(isset($_SESSION['Usuario'])){
+				$array_usuario=$_SESSION['Usuario'];
+				if($array_usuario[0]['Privilegio']=="A"){
+					include 'cabecera_admin.html';
+				}else if($array_usuario[0]['Privilegio']=="C"){
+					include 'cabecera_logeado.html';
+				}else{
+					include 'cabecera.html';
+				}
+			}else{
+				include 'cabecera.html';
+			}
+			?>
 		<div id="div_Title"><h1 id="carrito_Title">CARRITO</h1></div>
 
 		<div id="contenedor_carrito">

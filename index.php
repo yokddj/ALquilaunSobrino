@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="es">
 <!--    AGREGAMOS HEAD CON PHP	-->
@@ -17,7 +20,18 @@
 
 	<?php 
 
+	if(isset($_SESSION['Usuario'])){
+		$array_usuario=$_SESSION['Usuario'];
+			if($array_usuario[0]['Privilegio']=="A"){
+				include 'cabecera_admin.html';
+			}else if($array_usuario[0]['Privilegio']=="C"){
+				include 'cabecera_logeado.html';
+			}else{
+				include 'cabecera.html';
+			}
+	}else{
 		include 'cabecera.html';
+	}
  	?>
 
 

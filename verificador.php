@@ -14,9 +14,18 @@
 		}
 		if(isset($array)){
 			//Aqui comprobaremos si es un usuario normal o el admin
-		
-				$_SESSION['Usuario']=$array;
-				header("Location: admin.php");
+				if($array[0]['Privilegio']=="A"){
+					$_SESSION['Usuario']=$array;
+					header("Location: index.php");
+				}else{
+					$_SESSION['Usuario']=$array;
+					header("Location: index.php");
+
+				}
+				//$_SESSION['Usuario']=$array;
+				//echo "Hola ".$array[0]['Nombre']." con apellido ".$array[0]['Apellido']." Te has registrado como: ".$array[0]['Privilegio']."";
+				
+				//header("Location: admin.php");
 			
 
 		}else{
