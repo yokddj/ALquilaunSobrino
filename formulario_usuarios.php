@@ -72,10 +72,6 @@
 				<label>Fecha de Nacimiento:</label><br />
 				<input id="text" class="input" name="fecha_nacimiento" type="date" maxlength="20"/><br />
 			</div>
-			<div class="row">
-				<label>Privilegio:</label><br />
-				<input id="text" class="input" name="privilegio" type="text" maxlength="1"/><br />
-			</div>
 			
 			<input id="submit_button"  style="background-color: #1F96FA" type="submit" value="Send email" onClick="window.document.formulario.submit();"/>
 			<input id="reset_button" style="background-color: #FF2A00" type="submit" value="Reset" onClick="window.document.formulario.reset();"/>
