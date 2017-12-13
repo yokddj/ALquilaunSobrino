@@ -51,14 +51,18 @@ include 'conexionBD.php';
 							<td>Ciudad</td>
 							<td>Fecha de nacimiento</td>
 							<td>Privilegio</td>
-							<td>Eliminar</td>
 							<td>Modificar</td>
+							<td>Eliminar</td>
+
 						</tr>
 						<?php 
 						
-								$query="select * from usuarios";	
+						$query="select * from usuarios";	
 						$resultado=mysqli_query($bd,$query);
 						while($fila=mysqli_fetch_array($resultado)){
+							$login=$fila['login'];
+
+
 							echo '
 							<tr>
 							<form action="modificar_usuarios.php" method="POST">
@@ -70,17 +74,17 @@ include 'conexionBD.php';
 							<td><input type="text" name="telefono" value="'.$fila['telefono'].'"></td>
 							<td><input type="text" name="direccion" value="'.$fila['direccion'].'"></td>
 							<td><input type="text" name="ciudad" value="'.$fila['ciudad'].'"></td>
-							<td><input type="text" name="fecha_nacimiento" value="'.$fila['fecha_nacimiento'].'"></td>
+							<td><input type="date" name="fecha_nacimiento" value="'.$fila['fecha_nacimiento'].'"></td>
 							<td><input type="text" name="privilegio" value="'.$fila['privilegio'].'"></td>
 							<td><button type="submit"  class="modificar" onClick="window.document.formulario.submit();">Modificar</button></td>
 							</form>
-							<td><button class="eliminar" onClick="eliminar_usuarios('.$fila['login'].')">Eliminar</button></td>
+							<td><button class="eliminar" onClick="eliminar_usuarios('.$login.')">Eliminar</button></td>
 							</tr>
 							';
 						}
 						?>
 					</table>
-				<p>Nota: El privilegio será C para un usuario normal y A para el administrador</p>
+					<p>Nota: El privilegio será C para un usuario normal y A para el administrador</p>
 				</center>
 
 			</section>
@@ -98,9 +102,6 @@ include 'conexionBD.php';
 
 		include 'footer.html';
 		?>
-		
-
-	</body>
 		<script>
 		function eliminar_usuarios(login){
 			if(confirm("Se va a eliminar el usuario con login= "+login)){
@@ -109,5 +110,8 @@ include 'conexionBD.php';
 		}
 
 		</script>
+
+	</body>
+	
 
 	</html>
