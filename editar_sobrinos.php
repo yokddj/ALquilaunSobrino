@@ -43,34 +43,46 @@ include 'conexionBD.php';
 						<tr>
 							<td>Id</td>
 							<td>Nombre</td>
+							<td>Imagen</td>
 							<td>Descripcion</td>
 							<td>Precio</td>
 							<td>Disponibilidad</td>
-							<td>Eliminar</td>
 							<td>Modificar</td>
+							<td>Eliminar</td>
+							
 						</tr>
 						<?php 
 						
-								$query="select * from ingenieros";	
+						$query="select * from ingenieros";	
 						$resultado=mysqli_query($bd,$query);
 						while($fila=mysqli_fetch_array($resultado)){
+							$nombre=$fila['nombre'];				
+							$precio=$fila['precio'];
+							$foto=$fila['foto'];				
+							$descripcion=$fila['descripcion'];
+							$disponibilidad=$fila['disponibilidad'];				
+							$id=$fila['id_ingeniero'];
+
 							echo '
 							<tr>
-							<td><input type="hidden" value="'.$fila['id_ingeniero'].'">'.$fila['id_ingeniero'].'</td>
-							<td><input type="text" class="nombre" value="'.$fila['nombre'].'"></td>
-							<td><input type="text" class="foto" value="'.$fila['foto'].'"></td>
-							<td><input type="text" class="descripcion" value="'.$fila['descripcion'].'"></td>
-							<td><input type="text" class="precio" value="'.$fila['precio'].'"></td>
-							<td><input type="text" class="disponibilidad" value="'.$fila['disponibilidad'].'"></td>
-							<td><button class="eliminar" data-id="'.$fila['id_ingeniero'].'">Eliminar</button></td>
-							<td><button class="modificar" data-id="'.$fila['id_ingeniero'].'">Modificar</button></td>
+							<form action="modificar_ingenieros.php" method="POST">
+							<td><input type="hidden" name="id" value="'.$id.'">'.$id.'</td>
+							<td><input type="text" maxlength="20" name="nombre" value="'.$nombre.'"></td>
+							<td><input type="text" maxlength="20" name="foto" value="'.$foto.'"></td>
+							<td><input type="text" maxlength="254" name="descripcion" value="'.$descripcion.'"></td>
+							<td><input type="number" name="precio" value="'.$precio.'"></td>
+							<td><input type="text" name="disponibilidad" value="'.$disponibilidad.'"></td>
+							<td><button type="submit"  class="modificar" onClick="window.document.formulario.submit();">Modificar</button></td>
+							</form>
+							<td><button class="eliminar" onClick="eliminar_sobrino('.$id.')">Eliminar</button></td>
 							</tr>
 							';
 						}
 						?>
 					</table>
+					<p>Nota: La disponibilidad será 1 disponible y 2 no disponible</p>
 				</center>
-
+				
 			</section>
 
 
@@ -87,7 +99,14 @@ include 'conexionBD.php';
 		include 'footer.html';
 		?>
 		
+		<script>
+		function eliminar_sobrino(id){
+			if(confirm("Se va a eliminar el ingeniero con id= "+id)){
+				location.href="eliminar_ingenieros.php?id="+id;
+			}
+		}
 
+		</script>
 	</body>
 
 	</html>

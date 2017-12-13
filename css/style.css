@@ -24,10 +24,10 @@ header h1{
 	top: -15px;
 	font-size: 1.55em;
 	margin-right: 20px;
-	}
+}
 header h1 > *{
-		text-decoration: none;
-		color: black;
+	text-decoration: none;
+	color: black;
 }
 header nav .ioMenuMovil{
 	height: 35px;
@@ -178,38 +178,38 @@ footer p{
 @media screen and (min-width: 767px) {
 	
 	header{
-	background-color: #FFFFFF;
-	position: fixed; 
-	top: 0; 
-	left: 0; 
-	width: 100%;
-	height: 70px;
-	z-index: 10;
-	box-shadow: 0px 3px 10px #5E5D5D;
-	font-family: 'Dancing Script', cursive;
-	font-weight: bolder;
+		background-color: #FFFFFF;
+		position: fixed; 
+		top: 0; 
+		left: 0; 
+		width: 100%;
+		height: 70px;
+		z-index: 10;
+		box-shadow: 0px 3px 10px #5E5D5D;
+		font-family: 'Dancing Script', cursive;
+		font-weight: bolder;
 	}
 	header h1{
-	display: inline-block;
-	width: 30%;
-	margin-left: 30px;
-	height: 50px;
-	text-align: left;
-	float: left;
-	margin-right: 0px;
-	top: 0px;
-	font-size: 1.69em;
+		display: inline-block;
+		width: 30%;
+		margin-left: 30px;
+		height: 50px;
+		text-align: left;
+		float: left;
+		margin-right: 0px;
+		top: 0px;
+		font-size: 1.69em;
 	}
 	
 	
 	
 	header nav{
-	display: inline-block;
-	float: right;
-	width: 65%;
-	top: 50px;
-	height: 50px;
-	vertical-align: middle;
+		display: inline-block;
+		float: right;
+		width: 65%;
+		top: 50px;
+		height: 50px;
+		vertical-align: middle;
 	}
 	header nav #showMenu,
 	header nav #hideMenu{
@@ -248,7 +248,7 @@ footer p{
 	}
 
 	#slider{
-	top: 20px;
+		top: 20px;
 	}
 
 	/*--------------------------------Animaciones HEADER------------------*/
@@ -274,7 +274,27 @@ footer p{
 	#contacto a:hover{
 		box-shadow: 0px 3px 0px #5E5D5D;
 	}
-	
+	#login a:hover{
+		box-shadow: 0px 3px 0px #5E5D5D;
+	}
+	#carrito a:hover{
+		box-shadow: 0px 3px 0px #5E5D5D;
+	}
+	#salir a:hover{
+		box-shadow: 0px 3px 0px #5E5D5D;
+	}
+	#introducir_ingenieros a:hover{
+		box-shadow: 0px 3px 0px #5E5D5D;
+	}
+	#introducir_usuario a:hover{
+		box-shadow: 0px 3px 0px #5E5D5D;
+	}
+	#editar_ingenieros a:hover{
+		box-shadow: 0px 3px 0px #5E5D5D;
+	}
+	#editar_usuario a:hover{
+		box-shadow: 0px 3px 0px #5E5D5D;
+	}
 }
 
 
@@ -331,91 +351,91 @@ footer p{
 /*-----------------------------------------------------------------------------*/ 
 /*-----------------------------------------------------------------------------*/ 
 #div_Title{
-  top:70px;
-  position: relative;
+	top:70px;
+	position: relative;
 }
 #client_Title{
-  text-align: center;
-  font-family: 'Dancing Script', cursive;
-  font-weight: bolder;
+	text-align: center;
+	font-family: 'Dancing Script', cursive;
+	font-weight: bolder;
 }
 
 .contenedor-clientes{   
-  width: 400px;
-  top:70px;
-  position: relative;
-  margin:0 auto;
-  
+	width: 400px;
+	top:70px;
+	position: relative;
+	margin:0 auto;
+	
 }
 .div-img{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
-    cursor: pointer;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	cursor: pointer;
 
 
-   }
-   /*--------------------------ETSIT-------------------------------*/
+}
+/*--------------------------ETSIT-------------------------------*/
 .img-etsit{
-	 width: 100%;
-  display: block;
-  background-color: #FFFFFF;
-  position: relative;
-  
+	width: 100%;
+	display: block;
+	background-color: #FFFFFF;
+	position: relative;
+	
 }
 .text-etsit{
-        
-        position:relative;
-        z-index: -1;
-        display:block;
-        height: 10%;
-        top:-185px;
-        right:0;
-        padding-right:5px;
-    }
+	
+	position:relative;
+	z-index: -1;
+	display:block;
+	height: 10%;
+	top:-185px;
+	right:0;
+	padding-right:5px;
+}
 
-  /*---------------------PASCUAL----------------------------*/
-  .img-pascual{
-   width: 100%;
-  display: block;
-  background-color: #FFFFFF;
-  position: relative;
-  top: 0px;
-  }
+/*---------------------PASCUAL----------------------------*/
+.img-pascual{
+	width: 100%;
+	display: block;
+	background-color: #FFFFFF;
+	position: relative;
+	top: 0px;
+}
 .text-pascual{
-        
-        position:relative;
-        z-index: -1;
-        display:block;
-        height: 10%;
-        top:-150px;
-        right:0;
-        padding-right:5px;
-    }
+	
+	position:relative;
+	z-index: -1;
+	display:block;
+	height: 10%;
+	top:-150px;
+	right:0;
+	padding-right:5px;
+}
 
 
 
- /*---------------------michelin----------------------------*/
-  .img-michelin{
-   width: 100%;
-  display: block;
-  background-color: #FFFFFF;
-  position: relative;
-  top: -30px;
-  }
+/*---------------------michelin----------------------------*/
+.img-michelin{
+	width: 100%;
+	display: block;
+	background-color: #FFFFFF;
+	position: relative;
+	top: -30px;
+}
 .text-michelin{
-        
-        position:relative;
-        z-index: -1;
-        display:block;
-        height: 10%;
-        top:-210px;
-        right:0;
-        padding-right:5px;
-    }
+	
+	position:relative;
+	z-index: -1;
+	display:block;
+	height: 10%;
+	top:-210px;
+	right:0;
+	padding-right:5px;
+}
 
- 
+
 
 
 
@@ -463,15 +483,15 @@ footer p{
 /*-----------------------------------------------------------------------------*/ 
 /*-----------------------------------------------------------------------------*/ 
 #div_Title{
-  top:50px;
-  padding: 20px;
-  position: relative;
-  margin-bottom: 30px;
+	top:50px;
+	padding: 20px;
+	position: relative;
+	margin-bottom: 30px;
 }
 #sobrinos_Title{
-  text-align: center;
-  font-family: 'Dancing Script', cursive;
-  font-weight: bolder;
+	text-align: center;
+	font-family: 'Dancing Script', cursive;
+	font-weight: bolder;
 }
 
 #busqueda_avanzada_form{
@@ -479,33 +499,33 @@ footer p{
 }
 
 
- .divsobrino{
- 	border: 3px solid #504E4E;
- 	border-radius: 15px;
- 	margin-left: 100px;
- 	margin-top: 50px;
- 	margin-bottom:50px; 
- 	top: 30px;
- 	position: relative;
- 	display: inline-block;
- 	width:200px;
- 	height: 400px;
- 	background-color: #81FA81; 
- 	 font-family: 'Dancing Script', cursive;
-  font-weight: bolder;
- }
- .divsobrino h2{
- 	text-align: center;
- }
- .divsobrino p{
- 	margin-left:10px; 
- 	margin-right:10px; 
- 	text-align: center;
- }
- .divsobrino h3{
- 	text-align: center;
- }
- 
+.divsobrino{
+	border: 3px solid #504E4E;
+	border-radius: 15px;
+	margin-left: 100px;
+	margin-top: 50px;
+	margin-bottom:50px; 
+	top: 30px;
+	position: relative;
+	display: inline-block;
+	width:200px;
+	height: 400px;
+	background-color: #81FA81; 
+	font-family: 'Dancing Script', cursive;
+	font-weight: bolder;
+}
+.divsobrino h2{
+	text-align: center;
+}
+.divsobrino p{
+	margin-left:10px; 
+	margin-right:10px; 
+	text-align: center;
+}
+.divsobrino h3{
+	text-align: center;
+}
+
 .divimgsobrino{
 	margin: auto;
 	margin-top: 5px;
@@ -516,284 +536,122 @@ footer p{
 	margin-left: 12%;
 	width: 150px;
 	height: 30px;
-}*/
+	}*/
 
 
-.imgsobrino{
-	width: 100%;
-	border: 2px solid #9F9A9A;
-	border-radius: 50px;
-}
-#formulario_busqueda_simple{
-	margin-top: 35px;
-}
-
-/*-----------BOTON COMPRA--------------*/ 
-#boton_Compra{
-	background-color: #138CC4;
-	border-radius: 5px;
-	width: 130px;
-	height: 40px;
-	margin-left: 35px;
-	cursor: pointer;
-}
-#boton_Compra a{
-	
-	line-height: 40px;  
-	color: black;
-	font-weight: bolder;
-	text-decoration: none;
-	margin-left: 25px;
-	
-}
-/*-----------BOTON COMPRA NO DISPONIBLE--------------*/ 
-#boton_Compra_nodisponible{
-	background-color: #C44913;
-	border-radius: 5px;
-	width: 130px;
-	height: 40px;
-	margin-left: 35px;
-}
-#boton_Compra_nodisponible a{
-	
-	line-height: 40px;  
-	color: black;
-	font-weight: bolder;
-	text-decoration: none;
-	margin-left: 25px;
-	
-}
-
-/*-----------CLICK--------------*/ 
-#boton_Compra:active{
-	-webkit-animation: 0.7s click 1;
-}
-
-@-webkit-keyframes click{
-	25%,75%{
-		-webkit-transform:scale(0.8);
+	.imgsobrino{
+		width: 100%;
+		border: 2px solid #9F9A9A;
+		border-radius: 50px;
 	}
-	50%{
-		-webkit-transform:scale(1.1);
+	#formulario_busqueda_simple{
+		margin-top: 35px;
 	}
-}
 
-   @media screen and (max-width: 750px) {
-  
-	.divsobrino{
- 	margin-left: 50px;
- 	margin-top: 50px;
- 	margin-bottom:50px; 
-	 }
+	/*-----------BOTON COMPRA--------------*/ 
+	#boton_Compra{
+		background-color: #138CC4;
+		border-radius: 5px;
+		width: 130px;
+		height: 40px;
+		margin-left: 35px;
+		cursor: pointer;
+	}
+	#boton_Compra a{
+		
+		line-height: 40px;  
+		color: black;
+		font-weight: bolder;
+		text-decoration: none;
+		margin-left: 25px;
+		
+	}
+	/*-----------BOTON COMPRA NO DISPONIBLE--------------*/ 
+	#boton_Compra_nodisponible{
+		background-color: #C44913;
+		border-radius: 5px;
+		width: 130px;
+		height: 40px;
+		margin-left: 35px;
+	}
+	#boton_Compra_nodisponible a{
+		
+		line-height: 40px;  
+		color: black;
+		font-weight: bolder;
+		text-decoration: none;
+		margin-left: 25px;
+		
+	}
 
-  }
-   
-   @media screen and (min-width: 1550px) {
-  
+	/*-----------CLICK--------------*/ 
+	#boton_Compra:active{
+		-webkit-animation: 0.7s click 1;
+	}
+
+	@-webkit-keyframes click{
+		25%,75%{
+			-webkit-transform:scale(0.8);
+		}
+		50%{
+			-webkit-transform:scale(1.1);
+		}
+	}
+
+	@media screen and (max-width: 750px) {
+		
+		.divsobrino{
+			margin-left: 50px;
+			margin-top: 50px;
+			margin-bottom:50px; 
+		}
+
+	}
+	
+	@media screen and (min-width: 1550px) {
+		
 		.contenedorsobrinos{
 			min-height: 780px;
 		}
-  }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*-----------------------------------------------------------------------------*/ 
-/*-----------------------------------------------------------------------------*/ 
-/*--------------------------------APARTADOS USUARIOS---------------------------*/ 
-/*-----------------------------------------------------------------------------*/ 
-/*-----------------------------------------------------------------------------*/ 
-#formulario_usuarios{
-  top:50px;
-  padding: 20px;
-  text-align: center;
-  position: relative;
-  display: inline;
-  margin-bottom: 50px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*-----------------------------------------------------------------------------*/ 
-/*-----------------------------------------------------------------------------*/ 
-/*--------------------------------APARTADOS CARRITO---------------------------*/ 
-/*-----------------------------------------------------------------------------*/ 
-/*-----------------------------------------------------------------------------*/ 
-#carrito_Title{
-  text-align: center;
-  font-family: 'Dancing Script', cursive;
-  font-weight: bolder;
-}
-#contenedor_carrito{
-
-  min-height: 80vh;
-}
-.producto_carrito{
-border: 3px solid #504E4E;
- 	border-radius: 15px;
- 	margin-left: 100px;
- 	margin-top: 50px;
- 	margin-bottom:50px; 
- 	top: 30px;
- 	position: relative;
- 	display: inline-block;
- 	width:200px;
- 	height: 300px;
- 	background-color: #81FA81; 
- 	 font-family: 'Dancing Script', cursive;
-  font-weight: bolder;
-}
-.div_imagen_carrito{
-	margin: auto;
-	margin-top: 5px;
-	width: 150px;
-	height: 150px;
-}
-
-
- .producto_carrito h2{
- 	text-align: center;
- }
- .producto_carrito p{
- 	margin-left:10px; 
- 	margin-right:10px; 
- 	text-align: center;
- }
- 
- 
-
-
-.div_imagen_carrito img{
-	width: 100%;
-	border: 2px solid #9F9A9A;
-	border-radius: 50px;
-}
-
-
-/*-----------BOTON ELIMINAR--------------*/ 
-#boton_Eliminar{
-	background-color: #138CC4;
-	border-radius: 5px;
-	width: 130px;
-	height: 40px;
-	cursor: pointer;
-}
-#boton_Eliminar a{
-	
-	line-height: 40px;  
-	color: black;
-	font-weight: bolder;
-	text-decoration: none;
-	
-}
-
-
-/*-----------CLICK--------------*/ 
-#boton_Compra:active{
-	-webkit-animation: 0.7s click 1;
-}
-
-@-webkit-keyframes click{
-	25%,75%{
-		-webkit-transform:scale(0.8);
 	}
-	50%{
-		-webkit-transform:scale(1.1);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	/*-----------------------------------------------------------------------------*/ 
+	/*-----------------------------------------------------------------------------*/ 
+	/*--------------------------------APARTADOS USUARIOS---------------------------*/ 
+	/*-----------------------------------------------------------------------------*/ 
+	/*-----------------------------------------------------------------------------*/ 
+	#formulario_usuarios{
+		top:50px;
+		padding: 20px;
+		text-align: center;
+		position: relative;
+		display: inline;
+		margin-bottom: 50px;
 	}
-}
 
 
 
@@ -850,16 +708,8 @@ border: 3px solid #504E4E;
 
 
 
-/*-----------------------------------------------------------------------------*/ 
-/*-----------------------------------------------------------------------------*/ 
-/*--------------------------------APARTADOS ADMIN---------------------------*/ 
-/*-----------------------------------------------------------------------------*/ 
-/*-----------------------------------------------------------------------------*/ 
 
-#contenedor_admin{
 
-  min-height: 80vh;
-}
 
 
 
@@ -877,80 +727,250 @@ border: 3px solid #504E4E;
 
 
 
+	/*-----------------------------------------------------------------------------*/ 
+	/*-----------------------------------------------------------------------------*/ 
+	/*--------------------------------APARTADOS CARRITO---------------------------*/ 
+	/*-----------------------------------------------------------------------------*/ 
+	/*-----------------------------------------------------------------------------*/ 
+	#carrito_Title{
+		text-align: center;
+		font-family: 'Dancing Script', cursive;
+		font-weight: bolder;
+	}
+	#contenedor_carrito{
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*-----------------------------------------------------------------------------*/ 
-/*-----------------------------------------------------------------------------*/ 
-/*--------------------------------APARTADOS LOGIN---------------------------*/ 
-/*-----------------------------------------------------------------------------*/ 
-/*-----------------------------------------------------------------------------*/ 
-
-#contenedor_login{
+		min-height: 80vh;
+	}
+	.producto_carrito{
+		border: 3px solid #504E4E;
+		border-radius: 15px;
+		margin-left: 100px;
+		margin-top: 50px;
+		margin-bottom:50px; 
+		top: 30px;
+		position: relative;
+		display: inline-block;
+		width:200px;
+		height: 300px;
+		background-color: #81FA81; 
+		font-family: 'Dancing Script', cursive;
+		font-weight: bolder;
+	}
+	.div_imagen_carrito{
+		margin: auto;
+		margin-top: 5px;
+		width: 150px;
+		height: 150px;
+	}
+
+
+	.producto_carrito h2{
+		text-align: center;
+	}
+	.producto_carrito p{
+		margin-left:10px; 
+		margin-right:10px; 
+		text-align: center;
+	}
 	
-  min-height: 80vh;
-}
-#formulario_login{
-	margin-top: 30px;
-}
+	
+
+
+	.div_imagen_carrito img{
+		width: 100%;
+		border: 2px solid #9F9A9A;
+		border-radius: 50px;
+	}
+
+
+	/*-----------BOTON ELIMINAR--------------*/ 
+	#boton_Eliminar{
+		background-color: #138CC4;
+		border-radius: 5px;
+		width: 130px;
+		height: 40px;
+		cursor: pointer;
+	}
+	#boton_Eliminar a{
+		
+		line-height: 40px;  
+		color: black;
+		font-weight: bolder;
+		text-decoration: none;
+		
+	}
+
+
+	/*-----------CLICK--------------*/ 
+	#boton_Compra:active{
+		-webkit-animation: 0.7s click 1;
+	}
+
+	@-webkit-keyframes click{
+		25%,75%{
+			-webkit-transform:scale(0.8);
+		}
+		50%{
+			-webkit-transform:scale(1.1);
+		}
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	/*-----------------------------------------------------------------------------*/ 
+	/*-----------------------------------------------------------------------------*/ 
+	/*--------------------------------APARTADOS ADMIN---------------------------*/ 
+	/*-----------------------------------------------------------------------------*/ 
+	/*-----------------------------------------------------------------------------*/ 
+
+	#contenedor_admin{
+
+		min-height: 80vh;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	/*-----------------------------------------------------------------------------*/ 
+	/*-----------------------------------------------------------------------------*/ 
+	/*--------------------------------APARTADOS LOGIN---------------------------*/ 
+	/*-----------------------------------------------------------------------------*/ 
+	/*-----------------------------------------------------------------------------*/ 
+
+	#contenedor_login{
+		
+		min-height: 80vh;
+	}
+	#formulario_login{
+		margin-top: 30px;
+	}

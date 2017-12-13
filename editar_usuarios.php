@@ -61,18 +61,20 @@ include 'conexionBD.php';
 						while($fila=mysqli_fetch_array($resultado)){
 							echo '
 							<tr>
-							<td><input type="text" class="login" value="'.$fila['login'].'"></td>
-							<td><input type="text" class="password" value="'.$fila['password'].'"></td>
-							<td><input type="text" class="nombre" value="'.$fila['nombre'].'"></td>
-							<td><input type="text" class="apellido" value="'.$fila['apellido'].'"></td>
-							<td><input type="text" class="email" value="'.$fila['email'].'"></td>
-							<td><input type="text" class="telefono" value="'.$fila['telefono'].'"></td>
-							<td><input type="text" class="direccion" value="'.$fila['direccion'].'"></td>
-							<td><input type="text" class="ciudad" value="'.$fila['ciudad'].'"></td>
-							<td><input type="text" class="fecha_nacimiento" value="'.$fila['fecha_nacimiento'].'"></td>
-							<td><input type="text" class="privilegio" value="'.$fila['privilegio'].'"></td>
-							<td><button class="eliminar" data-login="'.$fila['login'].'">Eliminar</button></td>
-							<td><button class="modificar" data-login="'.$fila['login'].'">Modificar</button></td>
+							<form action="modificar_usuarios.php" method="POST">
+							<td><input type="text" name="login" value="'.$fila['login'].'" readonly></td>
+							<td><input type="text" name="password" value="'.$fila['password'].'"></td>
+							<td><input type="text" name="nombre" value="'.$fila['nombre'].'"></td>
+							<td><input type="text" name="apellido" value="'.$fila['apellido'].'"></td>
+							<td><input type="text" name="email" value="'.$fila['email'].'"></td>
+							<td><input type="text" name="telefono" value="'.$fila['telefono'].'"></td>
+							<td><input type="text" name="direccion" value="'.$fila['direccion'].'"></td>
+							<td><input type="text" name="ciudad" value="'.$fila['ciudad'].'"></td>
+							<td><input type="text" name="fecha_nacimiento" value="'.$fila['fecha_nacimiento'].'"></td>
+							<td><input type="text" name="privilegio" value="'.$fila['privilegio'].'"></td>
+							<td><button type="submit"  class="modificar" onClick="window.document.formulario.submit();">Modificar</button></td>
+							</form>
+							<td><button class="eliminar" onClick="eliminar_usuarios('.$fila['login'].')">Eliminar</button></td>
 							</tr>
 							';
 						}
@@ -99,5 +101,13 @@ include 'conexionBD.php';
 		
 
 	</body>
+		<script>
+		function eliminar_usuarios(login){
+			if(confirm("Se va a eliminar el usuario con login= "+login)){
+				location.href="eliminar_usuarios.php?login="+login;
+			}
+		}
+
+		</script>
 
 	</html>
