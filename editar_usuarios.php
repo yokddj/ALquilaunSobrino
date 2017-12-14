@@ -77,8 +77,8 @@ include 'conexionBD.php';
 							<td><input type="date" name="fecha_nacimiento" value="'.$fila['fecha_nacimiento'].'"></td>
 							<td><input type="text" name="privilegio" value="'.$fila['privilegio'].'"></td>
 							<td><button type="submit"  class="modificar" onClick="window.document.formulario.submit();">Modificar</button></td>
+							<td><input type="button" class="eliminar" onClick="eliminar_usuarios(\''.$login.'\')" value="Eliminar"></td>
 							</form>
-							<td><button class="eliminar" onClick="eliminar_usuarios('.$login.')">Eliminar</button></td>
 							</tr>
 							';
 						}

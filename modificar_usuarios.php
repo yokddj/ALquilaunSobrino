@@ -29,10 +29,8 @@ $privilegio = trim($privilegio);
 
 $query = "update usuarios set password='".$password."',nombre='".$nombre."',apellido='".$apellido."',email='".$email."',telefono='".$telefono."', 
 direccion='".$direccion."',ciudad='".$ciudad."',fecha_nacimiento='".$fecha_nacimiento."',privilegio='".$privilegio."'
- where login=".$login;
+ where login='".$login."'";
 mysqli_query($bd,$query);
-echo "Hola: ".$login." ".$password." ".$nombre." ".$apellido." ".$email." ".$telefono." ".$direccion." ".$ciudad." ".$fecha_nacimiento." ".$privilegio;
-
-//header("Location: editar_usuarios.php");		
+header("Location: editar_usuarios.php");		
 	
 ?>
