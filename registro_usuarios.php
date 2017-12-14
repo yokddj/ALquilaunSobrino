@@ -38,8 +38,8 @@ $telefono = addslashes($telefono);
 $patron5= "/^[a-zA-ZñÑ\s\W]/";
 $direccion = addslashes($direccion);
 $ciudad = addslashes($ciudad);
+$patron6="/^[0-9]{4}-[0-1]{1}[0-2]{1}-[0-3]{1}[0-9]{1}$/";
 $fecha_nacimiento = addslashes($fecha_nacimiento);
-
 
 
 //Comprobamos que esten todos los campos
@@ -89,6 +89,10 @@ if (!preg_match($patron, $login)){
 	echo '<script language="javascript">alert("La ciudad no tiene un formato adecuado vuelva a intentarlo por favor");</script>'; 
 	echo '<script language="javascript">location.href="formulario_usuarios.php"; </script>'; 
 	exit();	
+}else if (!preg_match($patron6, $fecha_nacimiento)){
+	echo '<script language="javascript">alert("La fecha de nacimiento no tiene un formato adecuado vuelva a intentarlo por favor");</script>'; 
+	echo '<script language="javascript">location.href="formulario_usuarios.php"; </script>'; 
+	exit();
 }
 
 

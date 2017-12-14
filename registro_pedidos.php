@@ -8,12 +8,26 @@
 $login = trim($login);
 
 
+//Comprbamos caacteres especiales
+$patron= "/^[a-zA-Z0-9_]+$/";
+$login = addslashes($login);
+
+//Comprobamos que esten todos los campos
 if (!$login)
-{
-   echo 'No ha introducido toda la información requerida para el cliente.<br />'
-          .'Por favor, vuelva a la página anterior e inténtelo de nuevo.';
-   exit;
-}
+  {
+ 	echo '<script language="javascript">alert("Ha dejado algún campo sin completar, intentelo de nuevo");</script>'; 
+	echo '<script language="javascript">location.href="formulario_usuarios.php"; </script>'; 
+ 	exit();	
+  }
+
+ if (!preg_match($patron, $login)){
+	
+	echo '<script language="javascript">alert("El login no tiene un formato adecuado vuelva a intentarlo por favor");</script>'; 
+	echo '<script language="javascript">location.href="formulario_usuarios.php"; </script>'; 
+	exit();
+}else{}
+
+
 include('conexionBD.php');
 
 $query="insert into pedidos values (NULL,' ". $login ."', ' 52.36 ', ' 2011-12-04 ' )";
