@@ -103,9 +103,9 @@ include('conexionBD.php');
 
 //Introduccion de los datos
 $query="insert into usuarios values ('". $login . "', '".$password ."', '".$nombre ."', ' ". $apellido ."', ' ". $email ."', '". $telefono ."', ' ". $direccion ."', '" .$ciudad . "', '". $fecha_nacimiento . "', 'C')";
-echo $query;
 $resultado=mysqli_query($bd,$query);
 $num=mysqli_affected_rows($bd);
-echo	"El	número	de	usuarios registrados es:	"	.	$num	.		".	<br>";
+
+header("Location: login.php?datos introducidos satisfactoriamente");
 
 ?>
