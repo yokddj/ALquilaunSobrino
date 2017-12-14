@@ -85,6 +85,7 @@ session_start();
 	?>
 	<div id="div_Title"><h1 id="sobrinos_Title">CALENDARIO</h1></div>
 	<div id="contenedor_admin">
+		<center>
 		<table id="table">
 			<content id="titulo"><?php echo "Hoy es: " .$diaActual. " de " .$meses[$mesActual]. " de " .$anoActual. " "?></content>
 			<br>
@@ -143,7 +144,7 @@ session_start();
 					}
 
 					?>
-				</table>
+				</table></center>
 			</div>
 
 			<?php 

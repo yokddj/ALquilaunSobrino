@@ -136,7 +136,7 @@ if(isset($_SESSION['carrito'])){//Aqui entrara si ya hay alguien en el carro
 		}
 		echo '<center><h2>Total: '.$total.' €</h2></center>';
 		if($total!=0){
-			echo '<center><div id="boton_Compra" ><a href="#">COMPRAR</a></div></center>';
+			echo '<center><div id="boton_Compra" ><a href="calendario.php">COMPRAR</a></div></center>';
 		}
 
 		?>
