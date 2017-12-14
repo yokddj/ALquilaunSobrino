@@ -47,6 +47,7 @@ if (!$login || !$password || !$nombre || !$apellido || !$email || !$telefono || 
   {
  	echo '<script language="javascript">alert("Ha dejado algún campo sin completar, intentelo de nuevo");</script>'; 
 	echo '<script language="javascript">location.href="formulario_usuarios.php"; </script>'; 
+ 	exit();	
   }
 
 
@@ -59,35 +60,35 @@ if (!preg_match($patron, $login)){
 	
 	echo '<script language="javascript">alert("El login no tiene un formato adecuado vuelva a intentarlo por favor");</script>'; 
 	echo '<script language="javascript">location.href="formulario_usuarios.php"; </script>'; 
-	
+	exit();	
 }else if (!preg_match($patron, $password)){
 	echo '<script language="javascript">alert("El password no tiene un formato adecuado vuelva a intentarlo por favor");</script>'; 
 	echo '<script language="javascript">location.href="formulario_usuarios.php"; </script>'; 
-	
+	exit();	
 }else if (!preg_match($patron2, $nombre)){
 	echo '<script language="javascript">alert("El nombre no tiene un formato adecuado vuelva a intentarlo por favor");</script>'; 
 	echo '<script language="javascript">location.href="formulario_usuarios.php"; </script>'; 
-	
+	exit();	
 }else if (!preg_match($patron2, $apellido)){
 	echo '<script language="javascript">alert("El apellido no tiene un formato adecuado vuelva a intentarlo por favor");</script>'; 
 	echo '<script language="javascript">location.href="formulario_usuarios.php"; </script>'; 
-	
+	exit();	
 }else if (!preg_match($patron3, $email)){
 	echo '<script language="javascript">alert("El email no tiene un formato adecuado vuelva a intentarlo por favor");</script>'; 
 	echo '<script language="javascript">location.href="formulario_usuarios.php"; </script>'; 
-	
+	exit();	
 }else if (!preg_match($patron4, $telefono)){
 	echo '<script language="javascript">alert("El telefono no tiene un formato adecuado vuelva a intentarlo por favor");</script>'; 
 	echo '<script language="javascript">location.href="formulario_usuarios.php"; </script>'; 
-	
+	exit();	
 }else if (!preg_match($patron5, $direccion)){
 	echo '<script language="javascript">alert("La direccion no tiene un formato adecuado vuelva a intentarlo por favor");</script>'; 
 	echo '<script language="javascript">location.href="formulario_usuarios.php"; </script>'; 
-	
+	exit();	
 }else if (!preg_match($patron5, $ciudad)){
 	echo '<script language="javascript">alert("La ciudad no tiene un formato adecuado vuelva a intentarlo por favor");</script>'; 
 	echo '<script language="javascript">location.href="formulario_usuarios.php"; </script>'; 
-	
+	exit();	
 }
 
 
