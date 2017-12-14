@@ -68,8 +68,6 @@ $query="insert into ingenieros values (NULL,'".$nombre ."', '".$descripcion ."',
 echo $query;
 $resultado=mysqli_query($bd,$query);
 $num=mysqli_affected_rows($bd);
-echo	"El	número	de	ingenieros registrados es:	"	.	$num	.		".	<br>";
-
-include('buscador_ingenieros.php');
+header("location:editar_sobrinos.php")
 
 ?>
