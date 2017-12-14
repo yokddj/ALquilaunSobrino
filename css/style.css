@@ -877,12 +877,16 @@ footer p{
 	/*-----------------------------------------------------------------------------*/ 
 
 	#contenedor_admin{
-
 		min-height: 80vh;
 	}
 
 
 
+
+#contenedor_comprado{
+		margin-top: 50px;
+		min-height: 80vh;
+	}
 
 
 
