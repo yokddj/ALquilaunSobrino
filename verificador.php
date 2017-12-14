@@ -9,7 +9,7 @@
 
 
 		while ($fila=mysqli_fetch_array($resultado)) {
-			$array[]=array('Login'=>$fila['login'],'Nombre'=>$fila['nombre'],
+			$array[]=array('Login'=>$_POST['Usuario_login'],'Nombre'=>$fila['nombre'],
 				'Apellido'=>$fila['apellido'],'Privilegio'=>$fila['privilegio']);
 		}
 		if(isset($array)){			
